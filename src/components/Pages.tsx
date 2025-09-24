@@ -14,30 +14,13 @@ const Pages = () => {
         description="Welcome to my portfolio website!"
         TabIcon={<Briefcase />}
       >
-        <div className="flex w-full">
-          <div className="flex flex-col p-5 gap-y-10">
-            <h1 className="uppercase text-9xl">Janos Istvan Papp</h1>
-            <p className="max-w-200 text-2xl bg-accent-alt p-5 rounded-2xl">
-              I am a{" "}
-              <span className="font-bold text-accent">
-                full stack web developer
-              </span>{" "}
-              with <span className="font-bold text-accent">5 years</span> of
-              experience in the industry. I have full-round experience with the
-              web development pipeline from the{" "}
-              <span className="font-bold text-accent">frontend</span> and{" "}
-              <span className="font-bold text-accent">backend</span> through{" "}
-              <span className="font-bold text-accent">DevOps</span> and
-              continuous deployment{" "}
-              <span className="font-bold text-accent">(CI/CD)</span> which I
-              attained during my previous work experiences and independent
-              endavours. I also mentored and managed small-scale teams
-              effectively, and I am currently running a successful freelance web
-              development creation/consultation business.
-            </p>
-          </div>
-          <div className="flex flex-1 flex-col p-5 gap-y-10 items-end">
-            <div className="flex flex-col gap-y-5 border-2 p-2 rounded-xl">
+        <div className="flex flex-col w-full">
+          <div className="flex p-5 gap-y-10 justify-between">
+            <div className="flex flex-col">
+              <h1 className="uppercase text-9xl">Janos Istvan Papp</h1>
+              <h2 className="text-6xl">Full Stack Web Developer</h2>
+            </div>
+            <div className="flex flex-col gap-y-5 border-2 p-2 rounded-xl h-max">
               <div className="flex gap-x-2 items-center">
                 <Phone />
                 <p>+46 79 342 4292</p>
@@ -51,6 +34,28 @@ const Pages = () => {
                 <p>Fräkenvägen 10, 123 52 Farsta, Stockholm</p>
               </div>
             </div>
+          </div>
+          <div className="flex p-5 gap-x-5 justify-between border-t-1 flex-1">
+            <p className="max-w-200 text-2xl bg-accent-alt p-5 rounded-2xl text-justify h-max">
+              I have <span className="font-bold text-accent">5 years</span> of
+              full-round experience with the modern web development pipeline
+              from the <span className="font-bold text-accent">frontend</span>{" "}
+              and <span className="font-bold text-accent">backend</span> through{" "}
+              <span className="font-bold text-accent">DevOps</span> and
+              continuous deployment{" "}
+              <span className="font-bold text-accent">(CI/CD)</span> which I
+              attained during my previous work experiences and independent
+              endavours. I also mentored and managed small-scale teams
+              effectively, and I am currently running a successful freelance web
+              development creation/consultation business.
+            </p>
+            <p className="max-w-200 text-2xl bg-accent-alt p-5 rounded-2xl text-justify h-max">
+              I graduated in January of 2023, with a Bachelor's degree as a
+              Computer Scientist from the University of Pannonia, Hungary.
+              During my studies I majored in software development where on top
+              of strong mathematical foundations I was also taught the ins and
+              outs of project management, software architecture and teamwork.
+            </p>
           </div>
         </div>
       </Tab>
@@ -75,15 +80,15 @@ const Pages = () => {
           return (
             <>
               <div className="flex flex-col w-[20%] border-4 p-2 gap-y-5 rounded-2xl m-5">
-                <h2 className="bg-accent-alt p-2 rounded-xl">
+                <p className="bg-accent-alt p-2 rounded-xl text-justify">
                   To the right is my most recent project, a website I built for
                   a small business. I worked closely with the owner to create a
                   clean and modern design that highlights their services and
                   makes it easy for visitors to navigate. The site is fully
                   responsive, performs smoothly across devices, and incorporates
                   basic SEO to help reach their audience effectively.
-                </h2>
-                <h2 className="bg-accent-alt p-2 rounded-xl">
+                </p>
+                <p className="bg-accent-alt p-2 rounded-xl text-justify">
                   I used <span className="font-bold text-accent">React</span>{" "}
                   with <span className="font-bold text-accent">Typescript</span>{" "}
                   built upon <span className="font-bold text-accent">Vite</span>{" "}
@@ -92,11 +97,23 @@ const Pages = () => {
                   styling for its simple approach to element styleing and to
                   familiarize myself with new cutting edge tools in web
                   development.
-                </h2>
+                </p>
+                <div className="flex flex-1 flex-col justify-end">
+                  <div className="bg-accent-alt p-2 rounded-xl">
+                    <p>Client: Pallag Bálint EV - LuxorPPFStudio</p>
+                    <span>
+                      Website:{" "}
+                      <a href="https://luxorppfstudio.hu/">luxorppfstudio.hu</a>
+                    </span>
+                    <p>@2025</p>
+                  </div>
+                </div>
               </div>
               <div className="flex  flex-1 w-[80%] justify-center items-center">
                 <div className="flex items-center justify-center bg-text rounded-2xl w-[95%] h-[85%] p-2">
-                  {loading && <ClipLoader />}
+                  {loading && (
+                    <ClipLoader color="var(--color-accent)" size={150} />
+                  )}
                   <iframe
                     src="https://luxorppfstudio.hu/"
                     className={`w-full h-full rounded-2xl ${loading && `hidden`}`}
