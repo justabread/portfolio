@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+  --color-dominant: #d9dbbc; /* main background */
+
+  --color-secondary: #b8d8ba; /* cards, panels, sections */
+
+  --color-accent: #ef959d; /* buttons, links, highlights */
+  --color-accent-alt: #fcddbc; /* hover states, subtle accents */
+
+  --color-text: #69585f; /* readable text */
+}
+
 :root {
   font-family: "Public Sans", system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -7,7 +18,6 @@
   font-style: normal;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #000000;
 
   font-synthesis: none;
